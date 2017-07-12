@@ -1,0 +1,37 @@
+Syntax Checking using gcc ... 
+
+Starting optimization step 0  ...  3 seconds 
+Starting optimization step 1  ...  3 seconds 
+Starting optimization step 2  ...  2 seconds 
+Starting optimization step 3  ...  3 seconds 
+Starting optimization step 4  ...  4 seconds 
+Starting optimization step 5  ...  3 seconds 
+Starting optimization step 6  ...  2 seconds 
+Starting optimization step 7  ...  3 seconds 
+Starting optimization step 8  ...  4 seconds 
+Starting optimization step 9  ...  3 seconds 
+Starting optimization step 10  ...  4 seconds 
+%I [BURST-101] Memory burst inferred: variable 'c' (__merlinkernel_vec_add_kernel.cpp)
+  burst buffer size = 40000 bytes
+%I [BURST-101] Memory burst inferred: variable 'a' (__merlinkernel_vec_add_kernel.cpp)
+  burst buffer size = 40000 bytes
+%I [BURST-101] Memory burst inferred: variable 'b' (__merlinkernel_vec_add_kernel.cpp)
+  burst buffer size = 40000 bytes
+Starting optimization step 11  ...  3 seconds 
+Starting optimization step 12  ...  3 seconds 
+%I [WDBUS-101] Memory coalescing inferred: variable 'a' (__merlinkernel_vec_add_kernel.cpp)
+  interface bitwidth = 512 bits
+%I [WDBUS-101] Memory coalescing inferred: variable 'b' (__merlinkernel_vec_add_kernel.cpp)
+  interface bitwidth = 512 bits
+%I [WDBUS-101] Memory coalescing inferred: variable 'c' (__merlinkernel_vec_add_kernel.cpp)
+  interface bitwidth = 512 bits
+Starting optimization step 13  ...  3 seconds 
+Starting optimization step 14  ...  4 seconds 
+Starting optimization step 15  ...  3 seconds 
+Starting optimization step 16  ...  4 seconds 
+Starting optimization step 17  ...  3 seconds 
+Starting optimization step 18  ...  3 seconds 
+Starting optimization step 19  ...  4 seconds 
+Starting optimization step 20  ...  4 seconds 
+Starting optimization step 21  ...  5 seconds 
+
