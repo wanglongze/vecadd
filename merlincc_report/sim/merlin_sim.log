@@ -1,0 +1,11 @@
+
+mars_perl -altera altera_run_flow.pl a10gx sim merlincc null null           
+aocl 16.1.2.203 (Intel(R) FPGA SDK for OpenCL(TM), Version 16.1.2 Build 203, Copyright (C) 2017 Intel Corporation)
+
+/usr/bin/ld: cannot find crtbeginS.o: No such file or directory
+/usr/bin/ld: cannot find -lgcc
+/usr/bin/ld: cannot find -lgcc_s
+aocl-clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Error: Optimizer FAILED.
+Refer kernel_top/kernel_top.log for details.
+

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define AOCL_ALIGNMENT 64
 #define VEC_SIZE 10000
-#include "__merlinhead_vec_add_kernel.h"
+#include "__merlinkernel_top.h"
 
 void vec_add_kernel(int *a, int *b, int*c, int inc);
 
@@ -28,7 +28,7 @@ int main()
 #ifdef XILINX
     opencl_init("kernel_top.xclbin");
 #endif
-    __merlinwrapper_vec_add_kernel(a,b,c,inc);
+    __merlinwrapper_vec_add(a,b,c,inc);
 //    vec_add_kernel(a, b, c, inc);
 
     for(i=0; i<VEC_SIZE; i++) {
