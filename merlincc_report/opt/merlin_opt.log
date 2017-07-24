@@ -1,39 +1,30 @@
-/curr/software/Xilinx/SDx/2017.1//bin/sdx: line 41: lsb_release: command not found
-/curr/software/Xilinx/SDx/2017.1//bin/sdx: line 42: [: : integer expression expected
-Syntax Checking using gcc ... 
+*******************************************************************************
+ Merlin Compiler (TM) Version 2017.2
+ Build 537071b.1225 on Mon Jul 10 21:59:22 2017 +0800
+ Copyright (C) 2015-2017 Falcon Computing Solutions, Inc. All Rights Reserved.
+*******************************************************************************
+INFO: Host - 'ip-172-31-73-140' with linux x86_64-linux-thread-multi
+INFO: User - longze
+INFO: Time - Mon Jul 24 02:39:57 UTC 2017
+INFO: Directory - /curr/longze/jentest/vecadd/vec_add_nonproject
 
-Starting optimization step 0  ...  4 seconds 
-Starting optimization step 1  ...  4 seconds 
-Starting optimization step 2  ...  3 seconds 
-Starting optimization step 3  ...  3 seconds 
-Starting optimization step 4  ...  4 seconds 
-Starting optimization step 5  ...  3 seconds 
-Starting optimization step 6  ...  2 seconds 
-Starting optimization step 7  ...  3 seconds 
-Starting optimization step 8  ...  4 seconds 
-Starting optimization step 9  ...  5 seconds 
-Starting optimization step 10  ...  4 seconds 
-%I [BURST-101] Memory burst inferred: variable 'c' (__merlinkernel_vec_add_kernel.cpp)
+%I [BURST-101] Memory burst inferred: variable 'c'
   burst buffer size = 40000 bytes
-%I [BURST-101] Memory burst inferred: variable 'a' (__merlinkernel_vec_add_kernel.cpp)
+%I [BURST-101] Memory burst inferred: variable 'a'
   burst buffer size = 40000 bytes
-%I [BURST-101] Memory burst inferred: variable 'b' (__merlinkernel_vec_add_kernel.cpp)
+%I [BURST-101] Memory burst inferred: variable 'b'
   burst buffer size = 40000 bytes
-Starting optimization step 11  ...  3 seconds 
-Starting optimization step 12  ...  4 seconds 
-%I [WDBUS-101] Memory coalescing inferred: variable 'a' (__merlinkernel_vec_add_kernel.cpp)
+%I [WDBUS-101] Memory coalescing inferred: variable 'a' 
   interface bitwidth = 512 bits
-%I [WDBUS-101] Memory coalescing inferred: variable 'b' (__merlinkernel_vec_add_kernel.cpp)
+%I [WDBUS-101] Memory coalescing inferred: variable 'b' 
   interface bitwidth = 512 bits
-%I [WDBUS-101] Memory coalescing inferred: variable 'c' (__merlinkernel_vec_add_kernel.cpp)
+%I [WDBUS-101] Memory coalescing inferred: variable 'c' 
   interface bitwidth = 512 bits
-Starting optimization step 13  ...  3 seconds 
-Starting optimization step 14  ...  4 seconds 
-Starting optimization step 15  ...  4 seconds 
-Starting optimization step 16  ...  3 seconds 
-Starting optimization step 17  ...  4 seconds 
-Starting optimization step 18  ...  3 seconds 
-Starting optimization step 19  ...  5 seconds 
-Starting optimization step 20  ...  4 seconds 
-Starting optimization step 21  ...  5 seconds 
-
+%I [FGPIP-101] Partitioning array 'b_buf_0' on dimension 2 completely
+%I [FGPIP-101] Partitioning array 'a_buf_0' on dimension 2 completely
+%I [FGPIP-101] Partitioning array 'c_buf_0' on dimension 2 completely
+%I [FGPIP-103] Loop fine-grained pipelining applied: loop 'L_0'
+  (__merlinkernel_vec_add_kernel.cpp) 
+%I [FGPIP-102] Loop parallelization applied: loop 'L_0_0'
+  (__merlinkernel_vec_add_kernel.cpp) 
+  parallel units:  16

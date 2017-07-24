@@ -11,11 +11,11 @@ CXXFLAGS += -lm
 CXX := gcc
 
 # OpenCL compile and link flags.
-ifeq ($(XILINX_SDACCEL),)
+ifeq ($(XILINX_SDX),)
 LINK=-DALTERA_KERNEL
 DEF=ALTERA
 else
-LINK=-L$(XILINX_SDACCEL)/runtime/lib/x86_64 -lxilinxopencl
+LINK=-L$(XILINX_SDX)/runtime/lib/x86_64 -lxilinxopencl
 DEF=XILINX
 endif
 

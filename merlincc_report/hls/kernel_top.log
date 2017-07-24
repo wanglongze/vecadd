@@ -1,0 +1,71 @@
+Compiler Command: aoc --fp-relaxed -g -c kernel/kernel_top.cl --report
+=========================================================================================================
+                                   *** Optimization Report ***                                        
+
+Kernels that do not use any work-item built-in functions, such as get_global_id(), are compiled for single
+work-item execution (a task). Otherwise, a kernel is compiled as an ND-Range.
+
+For tasks, the compiler will attempt to pipeline every loop in the kernel to allow multiple iterations of
+the loop to execute concurrently. If some loops are not pipelined, or not pipelined well, you may not get
+good performance.
+
+For ND-Range kernels, the loops are not pipelined. Instead, they are built to accept multiple work-items
+simultaneously. Kernel throughput is usually reduced by the largest total number of iterations of nested
+loops. A large number of threads is usually required to efficiently utilize ND-Range kernels.
+
+=========================================================================================================
+Kernel: vec_add_kernel                                                                                   
+=========================================================================================================
+The kernel is compiled for single work-item execution.
+
+The kernel has a required work-group size of (1, 1, 1).
+
+Loop Report:
+
+ + Loop "Block1" (file __merlinkernel_vec_add_kernel.cl line 28)
+ | Pipelined well. Successive iterations are launched every cycle.
+ | 
+ | 
+ |-+ Fully unrolled loop (file __merlinkernel_vec_add_kernel.cl line 31)
+     Loop was fully unrolled due to "#pragma unroll" annotation.
+     
+     
+ + Loop "Block2" (file __merlinkernel_vec_add_kernel.cl line 36)
+ | Pipelined well. Successive iterations are launched every cycle.
+ | 
+ | 
+ |-+ Fully unrolled loop (file __merlinkernel_vec_add_kernel.cl line 39)
+     Loop was fully unrolled due to "#pragma unroll" annotation.
+     
+     
+ + Loop "Block3" (file __merlinkernel_vec_add_kernel.cl line 53)
+ | Pipelined well. Successive iterations are launched every cycle.
+ | 
+ | 
+ |-+ Fully unrolled loop (file __merlinkernel_vec_add_kernel.cl line 56)
+     Loop was fully unrolled due to "#pragma unroll" annotation.
+     
+     
+ + Loop "Block4" (file __merlinkernel_vec_add_kernel.cl line 64)
+ | Pipelined well. Successive iterations are launched every cycle.
+ | 
+ | 
+ |-+ Fully unrolled loop (file __merlinkernel_vec_add_kernel.cl line 67)
+     Loop was fully unrolled due to "#pragma unroll" annotation.
+     
+     
+=========================================================================================================
+
++--------------------------------------------------------------------+
+; Estimated Resource Usage Summary                                   ;
++----------------------------------------+---------------------------+
+; Resource                               + Usage                     ;
++----------------------------------------+---------------------------+
+; Logic utilization                      ;   18%                     ;
+; ALUTs                                  ;    9%                     ;
+; Dedicated logic registers              ;    9%                     ;
+; Memory blocks                          ;   20%                     ;
+; DSP blocks                             ;    0%                     ;
++----------------------------------------+---------------------------;
+System name: kernel_top
+

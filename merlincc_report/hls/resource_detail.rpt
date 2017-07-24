@@ -1,0 +1,109 @@
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|                                                            |LEs           |FFs           |RAMs          |DSPs          |                                                            |
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|Static Partition                                            |66240         |132480        |333           |0             |                                                            |
+|    Board interface                                         |66240         |132480        |333           |0             |Platform interface logic.                                   |
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|Kernel System (Logic: 18%)                                  |72706 (9%)    |144014 (9%)   |483 (20%)     |0 (0%)        |                                                            |
+|    Board interface                                         |66240         |132480        |333           |0             |Platform interface logic.                                   |
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|vec_add_kernel (Logic: 1%)                                  |6466 (1%)     |11534 (1%)    |150 (6%)      |0 (0%)        |                                                            |
+|    Function overhead                                       |1570          |1505          |0             |0             |Kernel dispatch logic.                                      |
+|     '_memcpy_i0_1' (__merlinkernel_vec_add_kernel.cl:25)   |24            |101           |0             |0             |Implemented using registers of the following size:          |
+|                                                            |              |              |              |              |- 1 register of width 32 and depth 1
+|     '_memcpy_i1_1' (__merlinkernel_vec_add_kernel.cl:23)   |24            |101           |0             |0             |Implemented using registers of the following size:          |
+|                                                            |              |              |              |              |- 1 register of width 32 and depth 1
+|     '_memcpy_i2_1' (__merlinkernel_vec_add_kernel.cl:21)   |24            |101           |0             |0             |Implemented using registers of the following size:          |
+|                                                            |              |              |              |              |- 1 register of width 32 and depth 1
+|     'j0' (__merlinkernel_vec_add_kernel.cl:51)             |6             |68            |0             |0             |Implemented using registers of the following size:          |
+|                                                            |              |              |              |              |- 1 register of width 32 and depth 1
+|    b_buf_0                                                 |0             |0             |32            |0             |Private memory: Optimal.                                    |
+|                                                            |              |              |              |              |Requested size 65536 bytes (rounded up to nearest power of 2), implemented size 65536 bytes, stall-free, 1 read and 1 write. Additional information:
+|                                                            |              |              |              |              |- No additional details.
+|    a_buf_0                                                 |0             |0             |32            |0             |Private memory: Optimal.                                    |
+|                                                            |              |              |              |              |Requested size 65536 bytes (rounded up to nearest power of 2), implemented size 65536 bytes, stall-free, 1 read and 1 write. Additional information:
+|                                                            |              |              |              |              |- No additional details.
+|    c_buf_0                                                 |0             |0             |32            |0             |Private memory: Optimal.                                    |
+|                                                            |              |              |              |              |Requested size 65536 bytes (rounded up to nearest power of 2), implemented size 65536 bytes, stall-free, 1 read and 1 write. Additional information:
+|                                                            |              |              |              |              |- No additional details.
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|Block1 (Logic: 0%)                                          |1620 (0%)     |2688 (0%)     |17 (1%)       |0 (0%)        |                                                            |
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|State                                                       |266           |529           |0             |0             |Resources for live values and control logic. To reduce this area:|
+|                                                            |              |              |              |              |- reduce size of local variables
+|                                                            |              |              |              |              |- reduce scope of local variables, localizing them as much as possible
+|                                                            |              |              |              |              |- reduce number of nested loops
+|    Control flow logic                                      |1             |1             |0             |0             |                                                            |
+|    No Source Line                                          |201           |206           |0             |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:28                     |39            |65            |0             |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:32                     |24            |257           |0             |0             |                                                            |
+|Feedback                                                    |26            |85            |0             |0             |Resources for loop-carried dependencies. To reduce this area:|
+|                                                            |              |              |              |              |- reduce number and size of loop-carried variables
+|    __merlinkernel_vec_add_kernel.cl:28                     |26            |85            |0             |0             |                                                            |
+|Cluster logic                                               |977           |1760          |4             |0             |Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly.|
+|Computation                                                 |351           |315           |13            |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:32                     |351           |315           |13            |0             |                                                            |
+|    Pointer Computation (x2)                                |30            |0             |0             |0             |                                                            |
+|    Store                                                   |34            |24            |0             |0             |Stall-free write to memory declared on __merlinkernel_vec_add_kernel.cl:27.|
+|    Volatile Load                                           |287           |291           |13            |0             |                                                            |
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|Block2 (Logic: 0%)                                          |1620 (0%)     |2688 (0%)     |17 (1%)       |0 (0%)        |                                                            |
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|State                                                       |266           |529           |0             |0             |Resources for live values and control logic. To reduce this area:|
+|                                                            |              |              |              |              |- reduce size of local variables
+|                                                            |              |              |              |              |- reduce scope of local variables, localizing them as much as possible
+|                                                            |              |              |              |              |- reduce number of nested loops
+|    Control flow logic                                      |1             |1             |0             |0             |                                                            |
+|    No Source Line                                          |201           |206           |0             |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:36                     |39            |65            |0             |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:40                     |24            |257           |0             |0             |                                                            |
+|Feedback                                                    |26            |85            |0             |0             |Resources for loop-carried dependencies. To reduce this area:|
+|                                                            |              |              |              |              |- reduce number and size of loop-carried variables
+|    __merlinkernel_vec_add_kernel.cl:36                     |26            |85            |0             |0             |                                                            |
+|Cluster logic                                               |977           |1760          |4             |0             |Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly.|
+|Computation                                                 |351           |315           |13            |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:40                     |351           |315           |13            |0             |                                                            |
+|    Pointer Computation (x2)                                |30            |0             |0             |0             |                                                            |
+|    Store                                                   |34            |24            |0             |0             |Stall-free write to memory declared on __merlinkernel_vec_add_kernel.cl:35.|
+|    Volatile Load                                           |287           |291           |13            |0             |                                                            |
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|Block3 (Logic: 0%)                                          |842 (0%)      |706 (0%)      |2 (0%)        |0 (0%)        |                                                            |
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|State                                                       |32            |78            |0             |0             |Resources for live values and control logic. To reduce this area:|
+|                                                            |              |              |              |              |- reduce size of local variables
+|                                                            |              |              |              |              |- reduce scope of local variables, localizing them as much as possible
+|                                                            |              |              |              |              |- reduce number of nested loops
+|    Control flow logic                                      |1             |1             |0             |0             |                                                            |
+|    No Source Line                                          |15            |43            |0             |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:53                     |0             |3             |0             |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:61                     |16            |32            |0             |0             |                                                            |
+|Feedback                                                    |28            |86            |0             |0             |Resources for loop-carried dependencies. To reduce this area:|
+|                                                            |              |              |              |              |- reduce number and size of loop-carried variables
+|    __merlinkernel_vec_add_kernel.cl:53                     |28            |86            |0             |0             |                                                            |
+|Cluster logic                                               |218           |502           |2             |0             |Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly.|
+|Computation                                                 |564           |40            |0             |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:61                     |564           |40            |0             |0             |                                                            |
+|    Add (x32)                                               |512           |0             |0             |0             |                                                            |
+|    Load (x2)                                               |18            |16            |0             |0             |Stall-free read from memory declared on __merlinkernel_vec_add_kernel.cl:35.|
+|    Store                                                   |34            |24            |0             |0             |Stall-free write to memory declared on __merlinkernel_vec_add_kernel.cl:43.|
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|Block4 (Logic: 0%)                                          |736 (0%)      |3576 (0%)     |18 (1%)       |0 (0%)        |                                                            |
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
+|State                                                       |100           |198           |0             |0             |Resources for live values and control logic. To reduce this area:|
+|                                                            |              |              |              |              |- reduce size of local variables
+|                                                            |              |              |              |              |- reduce scope of local variables, localizing them as much as possible
+|                                                            |              |              |              |              |- reduce number of nested loops
+|    Control flow logic                                      |1             |1             |0             |0             |                                                            |
+|    No Source Line                                          |29            |68            |0             |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:64                     |17            |24            |0             |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:68                     |53            |105           |0             |0             |                                                            |
+|Feedback                                                    |34            |80            |0             |0             |Resources for loop-carried dependencies. To reduce this area:|
+|                                                            |              |              |              |              |- reduce number and size of loop-carried variables
+|    __merlinkernel_vec_add_kernel.cl:64                     |34            |80            |0             |0             |                                                            |
+|Cluster logic                                               |218           |502           |2             |0             |Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly.|
+|Computation                                                 |384           |2796          |16            |0             |                                                            |
+|    __merlinkernel_vec_add_kernel.cl:68                     |384           |2796          |16            |0             |                                                            |
+|    Load                                                    |9             |8             |0             |0             |Stall-free read from memory declared on __merlinkernel_vec_add_kernel.cl:43.|
+|    Pointer Computation (x2)                                |30            |0             |0             |0             |                                                            |
+|    Store                                                   |345           |2788          |16            |0             |                                                            |
++------------------------------------------------------------+--------------+--------------+--------------+--------------+------------------------------------------------------------+
