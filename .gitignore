@@ -1,0 +1,8 @@
+host_top
+kernel_top.mco
+kernel_top.xclbin
+libkernel.so
+merlincc_report/*
+sdaccel_profile_summary.*
+xmltmp
+
